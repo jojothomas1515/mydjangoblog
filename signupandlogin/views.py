@@ -8,6 +8,9 @@ from .forms import SignupForm, LoginForm
 
 
 # Create your views here.
+def Logout(request):
+    logout(request)
+    return redirect('login')
 
 def loginPage(request):
     if request.method == 'POST':

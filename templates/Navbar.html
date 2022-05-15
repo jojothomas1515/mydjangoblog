@@ -1,32 +1,34 @@
-
 <div class="bg-dark  sticky-top">
     <div class="container-fluid">
-        <div class="navbar navbar-dark" >
+        <div class="navbar navbar-dark">
             <div class="nav">
-            <h1 class="navbar-brand text-info">
-                Jojo's <span class="p-2 bg-info text-dark rounded-2">Blog</span>
-            </h1>
-                <div class="search-bar bg-secondary rounded-pill p-2 form-inline">
-                    <i class="fas fa-search text-info"></i><input class="sinp bg-transparent border-0" style="outline: none;" type="text" name="searchinp"/>
+                <h1 class="navbar-brand text-info">
+                    Jojo's <span class="p-2 bg-info text-dark rounded-2">Blog</span>
+                </h1>
+                <div class="search-bar rounded-pill p-2 form-inline">
+                    <i class="fas fa-search text-info"></i><input id="sinp" class="bg-transparent border-0 text-white-50"
+                                                                  style="outline: none;" type="text" name="searchinp"/>
                 </div>
-                </div>
+            </div>
 
             <nav class="nav">
                 <div class="nav-item mx-2">
                     <a class=" btn btn-outline-info" href="#">
                         Home
                     </a>
-                </div><div class="nav-item mx-2">
+                </div>
+                <div class="nav-item mx-2">
                     <a class=" btn btn-outline-info" href="#">
                         Featured
                     </a>
-                </div><div class="nav-item  mx-2">
+                </div>
+                <div class="nav-item  mx-2">
                     <a class=" btn btn-outline-info" href="#">
                         Latest
                     </a>
                 </div>
                 <div class="nav-item  ms-4">
-                    <a class=" btn btn-outline-danger" href="#">
+                    <a class=" btn btn-outline-danger" href="{% url 'logout' %}">
                         <i class="fas fa-door-open"></i>
                     </a>
                 </div>
