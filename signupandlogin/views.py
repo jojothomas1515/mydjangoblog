@@ -1,10 +1,11 @@
-from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.contrib.auth import login, logout, authenticate
+
 from django.contrib.messages import success, error
 from django.urls import reverse
 
 from .forms import SignupForm, LoginForm
+from .isauth import is_authenticated
 
 
 # Create your views here.
@@ -12,6 +13,7 @@ def Logout(request):
     logout(request)
     return redirect('login')
 
+@is_authenticated
 def loginPage(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
@@ -32,7 +34,7 @@ def loginPage(request):
 
     return render(request, 'signupandlogin/Login.html')
 
-
+@is_authenticated
 def signupPage(request):
     if request.method == "POST":
         form = SignupForm(request.POST)
@@ -48,3 +50,4 @@ def signupPage(request):
             return render(request, 'signupandlogin/signup.html')
 
     return render(request, 'signupandlogin/signup.html')
+

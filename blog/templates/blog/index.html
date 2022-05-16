@@ -1,12 +1,22 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 
 {% block content %}
-<section class="first-sec bg-dark text-white-50">
-<div class="container">
-    <div class="col">
-        <h1>Welcome to my blog</h1>
-    </div>
-</div>
-</section>
+    <section class="news">
+        <div class="container d-flex flex-wrap">
+            <div class="posts">
+                <h2 class="heading-section title">Hello Jojo🙂</h2>
+                <div class="img-con">
+                    <img src="{% static "blog/images/index.jpeg" %}">
+                </div>
+                <p class="summary">lorem sdkjmsdnljkspodak sndasdaoskdasd alskdjlasd alskdjajs.d alsdkaljdas ld
+                    salkd </p>
+                <ul class="tags">
+                    <li>news</li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

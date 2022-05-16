@@ -4,13 +4,16 @@
 <head>
 
     <meta charset="UTF-8"/>
+            <link rel="stylesheet" href="{% static '/navbar/nav.css' %}"/>
+            <link rel="stylesheet" href="{% static '/Footer/myfoot.css' %}"/>
+            <link rel="stylesheet" href="{% static '/blog/css/index.css' %}"/>
+
     <meta name="viewport" content="width=device-width , initial-scale=1.0"/>
     <link href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.min.css' %}" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="{% static 'navbar/js/myna.js' %}" defer></script>
-        <link rel="stylesheet" href="{% static '/navbar/nav.css' %}"/>
 
 
     <title>Jojo's Blog</title>
@@ -22,6 +25,6 @@
 
 {% block content %}
 {% endblock %}
-
+{% include 'Footer.html' %}
 </body>
 </html>
